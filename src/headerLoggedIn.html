@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GBMS</title>
+    <script src=" https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js "></script>
+    <link rel="stylesheet" type="text/css"
+          href=" https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="includes/fontAwsome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="master.css">
+</head>
+<style>
+    li a {
+        text-decoration: none;
+        color: black;
+        font-weight: bolder;
+    }
+</style>
+<body>
+<nav id="myNavbar" class="navbar navbar-fixed-top container-fluid ">
+    <div style="background: linear-gradient(45deg, rgb(0,0,0) 0%, rgba(186,108,189,1) 97%, rgba(186,108,189,1) 100%);;"
+         class="navbar my_navbar">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div >
+                <a href="home.php"  style="color: purple;font-family: Algerian,sans-serif;font-size: 35px;"
+                     class="navbar-brand black_color">
+                       <em id="gbms" style="text-align: center">GBMS</em>
+                </a>
+            </div>
+            <script>
+                var gbms = document.getElementById("gbms");
+                var myNavbar = document.getElementById("myNavbar");
+
+                function gbmsIncresaseTextSize() {
+                    gbms.style.fontSize = "100px";
+                    myNavbar.style.marginTop = "10px";
+                }
+
+                function gbmsBackToNormal() {
+                    gbms.style.fontSize = "35px";
+                    // var myNavbar = document.getElementById("myNavbar");
+                    myNavbar.style.marginTop = "0px";
+                }
+                gbms.addEventListener("mouseenter", gbmsIncresaseTextSize);
+                gbms.addEventListener("mouseleave", gbmsBackToNormal);
+            </script>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="home.php" style="color: #010101"><span class="fa fa-home fa-lg">Home</span> </a> </li>
+                <li><a href="cart.php" target="_blank" style="color: #010101">
+                   <span class="fa fa-shopping-cart fa-lg"></span> Cart</a></li>
+                <li><a href="settings.php" style="color: #010101" ><i class="fa fa-sun-o fa-lg fa-spin " aria-hidden="true"></i>
+                    Settings
+                </a></li>
+                <li><a href="logout.php" target="_blank" class="black_color" style="color: #010101"><i class="fa fa-share-square-o fa-lg" aria-hidden="true"></i>Logout </a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+</body>
+</html>
